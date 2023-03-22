@@ -1,18 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import { Image, View } from 'react-native';
+import type {
+  ImageProps as DefaultImageProps,
+  ImageURISource,
+} from 'react-native';
 
-export function AspectRatioImage(props) {
+type ImageProps = DefaultImageProps & {
+  source: ImageURISource;
+};
+export function AspectRatioImage(props: ImageProps) {
   const { source, ...otherProps } = props;
 
-  const [ratio, setRatio] = useState(null);
-  const [originalImageDimensions, setOriginalImageDimensions] = useState(null);
-  const [newImageWidth, setNewImageWidth] = useState(null);
+  console.log(source);
+  interface ImageDimensions {
+    width: number;
+    height: number;
+  }
+
+  const [ratio, setRatio] = useState<number>(0);
+  const [originalImageDimensions, setOriginalImageDimensions] =
+    useState<ImageDimensions>();
+  const [newImageWidth, setNewImageWidth] = useState<number>(0);
   const initImageDimensions = () => {
     const isLocalImage = typeof source === 'number';
 
     const uri = isLocalImage ? Image.resolveAssetSource(source) : source?.uri;
 
-    Image.getSize(uri, (width, height) => {
+    Image.getSize(uri as string, (width, height) => {
       setRatio(newImageWidth / width);
       setOriginalImageDimensions({ width, height });
     });
@@ -40,7 +54,7 @@ export function AspectRatioImage(props) {
         style={{
           width: newImageWidth,
           height: originalImageDimensions.height * ratio,
-          ...otherProps.style,
+          ...(otherProps.style as ImageProps),
         }}
       />
     );
