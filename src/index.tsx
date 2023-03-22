@@ -10,8 +10,6 @@ type ImageProps = DefaultImageProps & {
 };
 export function AspectRatioImage(props: ImageProps) {
   const { source, ...otherProps } = props;
-
-  console.log(source);
   interface ImageDimensions {
     width: number;
     height: number;
