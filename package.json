@@ -1,6 +1,6 @@
 {
   "name": "react-native-aspect-ratio-image",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "A responsive image component that always takes up the full width of the parent container and sets height according to the aspect ratio",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -47,7 +47,7 @@
     "android"
   ],
   "repository": "https://github.com/Vincentelias/react-native-aspect-ratio-image",
-  "author": "vincentelias <vincent.elias@hotmail.com> (https://github.com/Vincentelias)",
+  "author": "vincentelias <barony_04_cribs@icloud.com> (https://github.com/Vincentelias)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Vincentelias/react-native-aspect-ratio-image/issues"

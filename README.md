@@ -19,15 +19,14 @@ import { AspectRatioImage } from 'react-native-aspect-ratio-image';
 // Local image
 <AspectRatioImage source={require('../assets/icon.png')} />
 
-// You can use any props like you would on regular images:
+// You can use any props as you would on regular images:
 <AspectRatioImage alt={"test-image"} source={require('../assets/icon.png')} />
 
 ```
 
 ## Author
 
-Made by [Vincent Elias](https://github.com/Vincentelias)\
-Contact: vincent.elias@hotmail.com
+Made by [Vincent Elias](https://github.com/Vincentelias)
 
 ## License
 
