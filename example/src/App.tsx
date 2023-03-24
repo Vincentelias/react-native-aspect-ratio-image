@@ -13,7 +13,6 @@ export default function App() {
           uri: 'https://unsplash.it/400/400?image=1',
         }}
       />
-
       <AspectRatioImage source={require('../assets/icon.png')} />
     </View>
   );

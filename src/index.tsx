@@ -22,9 +22,11 @@ export function AspectRatioImage(props: ImageProps) {
   const initImageDimensions = () => {
     const isLocalImage = typeof source === 'number';
 
-    const uri = isLocalImage ? Image.resolveAssetSource(source) : source?.uri;
+    const uri = isLocalImage
+      ? Image.resolveAssetSource(source).uri
+      : source?.uri;
 
-    Image.getSize(uri as string, (width, height) => {
+    Image.getSize(uri, (width, height) => {
       setRatio(newImageWidth / width);
       setOriginalImageDimensions({ width, height });
     });
