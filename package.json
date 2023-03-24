@@ -1,6 +1,6 @@
 {
   "name": "react-native-aspect-ratio-image",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "A responsive image component that always takes up the full width of the parent container and sets height according to the aspect ratio",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
