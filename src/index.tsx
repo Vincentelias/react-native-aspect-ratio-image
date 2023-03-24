@@ -26,7 +26,7 @@ export function AspectRatioImage(props: ImageProps) {
       ? Image.resolveAssetSource(source).uri
       : source?.uri;
 
-    Image.getSize(uri, (width, height) => {
+    Image.getSize(uri || '', (width, height) => {
       setRatio(newImageWidth / width);
       setOriginalImageDimensions({ width, height });
     });
